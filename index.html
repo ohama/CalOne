@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cal - Calculator Test</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+    #display {
+      font-size: 32px;
+      text-align: right;
+      padding: 20px;
+      background: #f0f0f0;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .instructions {
+      font-size: 14px;
+      color: #666;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculator Engine Test</h1>
+  <div id="display">0</div>
+  <div class="instructions">
+    <p><strong>Open browser console to test calculator API:</strong></p>
+    <pre>
+// Test basic arithmetic
+inputDigit('5'); updateDisplay();
+handleOperator('+');
+inputDigit('3'); updateDisplay();
+handleOperator('='); updateDisplay();
+
+// Test decimal precision
+resetCalculator(); updateDisplay();
+inputDigit('0'); inputDecimal(); inputDigit('1');
+handleOperator('+');
+inputDigit('0'); inputDecimal(); inputDigit('2');
+handleOperator('='); updateDisplay();
+
+// Test division by zero
+resetCalculator(); updateDisplay();
+inputDigit('5'); handleOperator('÷'); inputDigit('0');
+handleOperator('='); updateDisplay();
+    </pre>
+    <p><code>updateDisplay()</code> function updates the display above.</p>
+  </div>
+
+  <script src="js/calculator.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
