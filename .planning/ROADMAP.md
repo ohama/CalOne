@@ -74,10 +74,11 @@ Plans:
   1. User sees list of previous calculations with expressions and results
   2. User can clear entire calculation history with one click
   3. History persists across browser sessions using localStorage
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 04-01: TBD during phase planning
+- [ ] 04-01-PLAN.md — History management module with localStorage persistence and error handling
+- [ ] 04-02-PLAN.md — Calculator expression tracking, responsive UI panel, and integration
 
 ### Phase 5: Polish and Deploy
 **Goal**: Calculator is production-ready and publicly accessible
