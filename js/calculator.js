@@ -137,6 +137,42 @@ function handlePercent() {
 }
 
 /**
+ * Handle backspace - delete last digit from display
+ * Handles edge cases: Error state, single digit, waitingForSecondOperand
+ */
+function handleBackspace() {
+  const { displayValue, waitingForSecondOperand } = calculator;
+
+  // If displaying Error, reset to '0'
+  if (displayValue === 'Error') {
+    calculator.displayValue = '0';
+    return;
+  }
+
+  // If waiting for second operand, clear display and reset flag
+  if (waitingForSecondOperand) {
+    calculator.displayValue = '0';
+    calculator.waitingForSecondOperand = false;
+    return;
+  }
+
+  // If single digit (e.g., "5"), reset to '0'
+  if (displayValue.length === 1) {
+    calculator.displayValue = '0';
+    return;
+  }
+
+  // If single digit with negative sign (e.g., "-3"), reset to '0'
+  if (displayValue.length === 2 && displayValue.startsWith('-')) {
+    calculator.displayValue = '0';
+    return;
+  }
+
+  // Otherwise, remove last character
+  calculator.displayValue = displayValue.slice(0, -1);
+}
+
+/**
  * Format value for display, handling overflow with scientific notation
  * @param {string|number} value - The value to format
  * @param {number} maxDigits - Maximum digits before using scientific notation
