@@ -19,7 +19,7 @@
 - [x] **INPT-01**: 숫자 버튼 (0-9) 입력
 - [x] **INPT-02**: AC (전체 초기화) 버튼
 - [x] **INPT-03**: 백스페이스 (마지막 자리 삭제)
-- [ ] **INPT-04**: 키보드 입력 지원 (숫자, 연산자, Enter, Escape, Backspace)
+- [x] **INPT-04**: 키보드 입력 지원 (숫자, 연산자, Enter, Escape, Backspace)
 - [x] **INPT-05**: 디스플레이 오버플로우 처리 (긴 숫자)
 
 ### History
@@ -73,7 +73,7 @@
 | INPT-01 | Phase 1 | Complete |
 | INPT-02 | Phase 1 | Complete |
 | INPT-03 | Phase 2 | Complete |
-| INPT-04 | Phase 3 | Pending |
+| INPT-04 | Phase 3 | Complete |
 | INPT-05 | Phase 1 | Complete |
 | HIST-01 | Phase 4 | Pending |
 | HIST-02 | Phase 4 | Pending |
