@@ -45,10 +45,12 @@ Plans:
   3. User can click operator buttons (+, -, ×, ÷, =) to perform calculations
   4. User can click AC to clear calculator and backspace to delete last digit
   5. Calculator layout is responsive and works on mobile and desktop screens
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: TBD during phase planning
+- [ ] 02-01-PLAN.md — HTML button structure and CSS Grid layout with responsive design
+- [ ] 02-02-PLAN.md — Add handleBackspace() function with edge case handling
+- [ ] 02-03-PLAN.md — Event delegation wiring and visual verification
 
 ### Phase 3: Keyboard Support
 **Goal**: Users can operate calculator using keyboard without mouse
