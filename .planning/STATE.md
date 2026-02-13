@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-14)
 ## Current Position
 
 Phase: 4 of 5 (Calculation History)
-Plan: 1 of 2
-Status: In progress
-Last activity: 2026-02-14 — Completed 04-01-PLAN.md
+Plan: 2 of 2
+Status: Phase complete
+Last activity: 2026-02-14 — Completed 04-02-PLAN.md
 
-Progress: [███████░░░] 70%
+Progress: [████████░░] 80%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
-- Average duration: 2.5 min
-- Total execution time: 0.25 hours
+- Total plans completed: 7
+- Average duration: 2.4 min
+- Total execution time: 0.28 hours
 
 **By Phase:**
 
@@ -30,10 +30,10 @@ Progress: [███████░░░] 70%
 | 1 | 1 | 2min | 2min |
 | 2 | 3 | 3min | 1min |
 | 3 | 1 | 10min | 10min |
-| 4 | 1 | 1min | 1min |
+| 4 | 2 | 3min | 1.5min |
 
 **Recent Trend:**
-- Last 5 plans: 02-02 (1min), 02-03 (1min), 03-01 (10min), 04-01 (1min)
+- Last 5 plans: 02-03 (1min), 03-01 (10min), 04-01 (1min), 04-02 (2min)
 - Trend: Most plans execute quickly; human verification checkpoints add time
 
 *Updated after each plan completion*
@@ -72,6 +72,12 @@ Recent decisions affecting current work:
 - Trim to half capacity on quota exceeded (rationale: graceful degradation instead of complete failure)
 - Cache history in memory (rationale: avoid repeated localStorage reads)
 - Log storage warnings without throwing (rationale: graceful degradation for private browsing)
+- Only track binary operations (+, -, ×, ÷) when = is pressed (rationale: unary ops are transformations, not calculations)
+- Exclude error results from history (rationale: division by zero is not a valid calculation result)
+- Wrap calculator in .calculator-container for flex layout (rationale: enables responsive side-by-side on desktop)
+- Add history.js script between calculator.js and main.js (rationale: dependency order)
+- Use event delegation for clear-history button (rationale: consistent with existing button handling pattern)
+- Defensive typeof checks before calling history functions (rationale: graceful degradation if history.js fails to load)
 
 ### Pending Todos
 
@@ -83,8 +89,8 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-14 (phase 4 execution - plan 01)
-Stopped at: Completed 04-01-PLAN.md
+Last session: 2026-02-14 (phase 4 execution - plan 02)
+Stopped at: Completed 04-02-PLAN.md
 Resume file: None
 
-Note: Phases 1-3 complete in single session. Phase 4 in progress.
+Note: Phases 1-4 complete. Ready for Phase 5 (Deployment).
