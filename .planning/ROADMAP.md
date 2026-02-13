@@ -30,10 +30,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Calculator displays "Error" for division by zero
   4. Calculator produces accurate results for floating-point operations (0.1 + 0.2 = 0.3)
   5. Calculator truncates or formats display when numbers exceed display width
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 01-01: TBD during phase planning
+- [ ] 01-01-PLAN.md — Core calculator engine with state management and all arithmetic operations
 
 ### Phase 2: Display and Button Interface
 **Goal**: Users can interact with calculator through clickable button interface
@@ -98,7 +98,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Core Calculator Engine | 0/TBD | Not started | - |
+| 1. Core Calculator Engine | 0/1 | Ready | - |
 | 2. Display and Button Interface | 0/TBD | Not started | - |
 | 3. Keyboard Support | 0/TBD | Not started | - |
 | 4. Calculation History | 0/TBD | Not started | - |
