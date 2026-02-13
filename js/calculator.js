@@ -48,10 +48,23 @@ function handleOperator(nextOperator) {
   if (calculator.firstOperand === null && !isNaN(inputValue)) {
     calculator.firstOperand = inputValue;
   } else if (calculator.operator) {
-    const result = performCalculation();
+    // Track completed calculation for history (only binary operations when = is pressed)
+    if (nextOperator === '=' && calculator.operator !== '=') {
+      const expression = `${calculator.firstOperand} ${calculator.operator} ${calculator.displayValue}`;
+      const result = performCalculation();
 
-    calculator.displayValue = String(result);
-    calculator.firstOperand = result;
+      // Only add to history if result is not an error
+      if (result !== 'Error' && typeof addToHistory === 'function') {
+        addToHistory(expression, String(result));
+      }
+
+      calculator.displayValue = String(result);
+      calculator.firstOperand = result;
+    } else {
+      const result = performCalculation();
+      calculator.displayValue = String(result);
+      calculator.firstOperand = result;
+    }
   }
 
   calculator.waitingForSecondOperand = true;
