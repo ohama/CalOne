@@ -51,6 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (buttonContainer) {
     buttonContainer.addEventListener('click', handleButtonClick);
   }
+
+  const backspaceButton = document.querySelector('.button-backspace');
+  if (backspaceButton) {
+    backspaceButton.addEventListener('click', handleButtonClick);
+  }
 });
 
 // Log ready message

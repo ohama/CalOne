@@ -27,8 +27,16 @@ body {
   overflow: hidden;
 }
 
+/* Display Row */
+.calculator-display-row {
+  display: flex;
+  align-items: flex-end;
+  background: #f0f0f0;
+}
+
 /* Display Area */
 .calculator-display {
+  flex: 1;
   padding: 1.5rem 1rem;
   text-align: right;
   font-size: 2.5rem;
@@ -40,6 +48,28 @@ body {
   text-overflow: ellipsis;
   min-height: 4rem;
   font-weight: 300;
+}
+
+/* Backspace Button */
+.button-backspace {
+  background: transparent;
+  border: none;
+  color: #666;
+  font-size: 1.25rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  align-self: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.button-backspace:active {
+  color: #000;
+}
+
+.button-backspace:focus-visible {
+  outline: 2px solid #007AFF;
+  outline-offset: -2px;
 }
 
 /* Button Grid Container - CSS Grid Layout */
