@@ -108,3 +108,53 @@ function resetCalculator() {
   calculator.waitingForSecondOperand = false;
   calculator.operator = null;
 }
+
+/**
+ * Toggle sign of current number (+/-)
+ */
+function toggleSign() {
+  const current = parseFloat(calculator.displayValue);
+  calculator.displayValue = String(current * -1);
+}
+
+/**
+ * Calculate percentage
+ * Contextual: If in middle of operation, calculates percentage of first operand
+ * Simple: Otherwise, divides by 100
+ */
+function handlePercent() {
+  const current = parseFloat(calculator.displayValue);
+  const { firstOperand, operator } = calculator;
+
+  if (firstOperand !== null && operator) {
+    // Contextual percent: "50 + 10%" means 50 + (50 × 0.1) = 55
+    const percentValue = (firstOperand * current) / 100;
+    calculator.displayValue = String(percentValue);
+  } else {
+    // Simple conversion: "25%" → 0.25
+    calculator.displayValue = String(current / 100);
+  }
+}
+
+/**
+ * Format value for display, handling overflow with scientific notation
+ * @param {string|number} value - The value to format
+ * @param {number} maxDigits - Maximum digits before using scientific notation
+ * @returns {string} - Formatted display string
+ */
+function formatForDisplay(value, maxDigits = 10) {
+  if (value === 'Error') {
+    return value;
+  }
+
+  const valueStr = String(value);
+
+  // Count digits excluding '-' and '.'
+  const digitCount = valueStr.replace(/[-.]/g, '').length;
+
+  if (digitCount > maxDigits) {
+    return Number(value).toExponential(2);
+  }
+
+  return valueStr;
+}
