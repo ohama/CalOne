@@ -13,7 +13,7 @@ Cal is a minimal calculator web app built with vanilla JavaScript, delivering pr
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Core Calculator Engine** - Pure calculation logic and state management
-- [ ] **Phase 2: Display and Button Interface** - Visual interface with button input
+- [x] **Phase 2: Display and Button Interface** - Visual interface with button input
 - [ ] **Phase 3: Keyboard Support** - Keyboard input and focus management
 - [ ] **Phase 4: Calculation History** - History tracking with localStorage persistence
 - [ ] **Phase 5: Polish and Deploy** - UI refinement and GitHub Pages deployment
@@ -48,9 +48,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — HTML button structure and CSS Grid layout with responsive design
-- [ ] 02-02-PLAN.md — Add handleBackspace() function with edge case handling
-- [ ] 02-03-PLAN.md — Event delegation wiring and visual verification
+- [x] 02-01-PLAN.md — HTML button structure and CSS Grid layout with responsive design
+- [x] 02-02-PLAN.md — Add handleBackspace() function with edge case handling
+- [x] 02-03-PLAN.md — Event delegation wiring and visual verification
 
 ### Phase 3: Keyboard Support
 **Goal**: Users can operate calculator using keyboard without mouse
@@ -101,7 +101,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Core Calculator Engine | 1/1 | Complete | 2026-02-14 |
-| 2. Display and Button Interface | 0/TBD | Not started | - |
+| 2. Display and Button Interface | 3/3 | Complete | 2026-02-14 |
 | 3. Keyboard Support | 0/TBD | Not started | - |
 | 4. Calculation History | 0/TBD | Not started | - |
 | 5. Polish and Deploy | 0/TBD | Not started | - |

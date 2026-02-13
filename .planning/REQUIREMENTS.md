@@ -18,7 +18,7 @@
 
 - [x] **INPT-01**: 숫자 버튼 (0-9) 입력
 - [x] **INPT-02**: AC (전체 초기화) 버튼
-- [ ] **INPT-03**: 백스페이스 (마지막 자리 삭제)
+- [x] **INPT-03**: 백스페이스 (마지막 자리 삭제)
 - [ ] **INPT-04**: 키보드 입력 지원 (숫자, 연산자, Enter, Escape, Backspace)
 - [x] **INPT-05**: 디스플레이 오버플로우 처리 (긴 숫자)
 
@@ -29,9 +29,9 @@
 
 ### UI
 
-- [ ] **UI-01**: 깔끔한 미니멀 디자인
-- [ ] **UI-02**: CSS Grid 기반 버튼 레이아웃
-- [ ] **UI-03**: 반응형 디자인 (모바일/데스크톱)
+- [x] **UI-01**: 깔끔한 미니멀 디자인
+- [x] **UI-02**: CSS Grid 기반 버튼 레이아웃
+- [x] **UI-03**: 반응형 디자인 (모바일/데스크톱)
 - [ ] **UI-04**: GitHub Pages 배포
 
 ## v2 Requirements
@@ -72,14 +72,14 @@
 | CALC-06 | Phase 1 | Complete |
 | INPT-01 | Phase 1 | Complete |
 | INPT-02 | Phase 1 | Complete |
-| INPT-03 | Phase 2 | Pending |
+| INPT-03 | Phase 2 | Complete |
 | INPT-04 | Phase 3 | Pending |
 | INPT-05 | Phase 1 | Complete |
 | HIST-01 | Phase 4 | Pending |
 | HIST-02 | Phase 4 | Pending |
-| UI-01 | Phase 2 | Pending |
-| UI-02 | Phase 2 | Pending |
-| UI-03 | Phase 2 | Pending |
+| UI-01 | Phase 2 | Complete |
+| UI-02 | Phase 2 | Complete |
+| UI-03 | Phase 2 | Complete |
 | UI-04 | Phase 5 | Pending |
 
 **Coverage:**
