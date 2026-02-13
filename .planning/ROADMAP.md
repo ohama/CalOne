@@ -61,10 +61,10 @@ Plans:
   2. User can press Enter to calculate result
   3. User can press Escape to clear calculator and Backspace to delete
   4. Calculator shows visible focus indicators when navigating with keyboard
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 03-01: TBD during phase planning
+- [ ] 03-01-PLAN.md — Keyboard event handler with key-to-action mapping for all calculator operations
 
 ### Phase 4: Calculation History
 **Goal**: Users can review and track their calculation history
