@@ -3,54 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cal - Calculator Test</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      max-width: 400px;
-      margin: 50px auto;
-      padding: 20px;
-    }
-    #display {
-      font-size: 32px;
-      text-align: right;
-      padding: 20px;
-      background: #f0f0f0;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-    .instructions {
-      font-size: 14px;
-      color: #666;
-      margin-top: 20px;
-    }
-  </style>
+  <title>Cal - Calculator</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <h1>Calculator Engine Test</h1>
-  <div id="display">0</div>
-  <div class="instructions">
-    <p><strong>Open browser console to test calculator API:</strong></p>
-    <pre>
-// Test basic arithmetic
-inputDigit('5'); updateDisplay();
-handleOperator('+');
-inputDigit('3'); updateDisplay();
-handleOperator('='); updateDisplay();
+  <div class="calculator">
+    <div class="calculator-display" id="display">0</div>
 
-// Test decimal precision
-resetCalculator(); updateDisplay();
-inputDigit('0'); inputDecimal(); inputDigit('1');
-handleOperator('+');
-inputDigit('0'); inputDecimal(); inputDigit('2');
-handleOperator('='); updateDisplay();
+    <div class="calculator-buttons">
+      <button type="button" class="button button-function" data-action="clear">AC</button>
+      <button type="button" class="button button-function" data-action="sign">+/-</button>
+      <button type="button" class="button button-function" data-action="percent">%</button>
+      <button type="button" class="button button-operator" data-action="operator" data-value="÷">÷</button>
 
-// Test division by zero
-resetCalculator(); updateDisplay();
-inputDigit('5'); handleOperator('÷'); inputDigit('0');
-handleOperator('='); updateDisplay();
-    </pre>
-    <p><code>updateDisplay()</code> function updates the display above.</p>
+      <button type="button" class="button" data-action="digit" data-value="7">7</button>
+      <button type="button" class="button" data-action="digit" data-value="8">8</button>
+      <button type="button" class="button" data-action="digit" data-value="9">9</button>
+      <button type="button" class="button button-operator" data-action="operator" data-value="×">×</button>
+
+      <button type="button" class="button" data-action="digit" data-value="4">4</button>
+      <button type="button" class="button" data-action="digit" data-value="5">5</button>
+      <button type="button" class="button" data-action="digit" data-value="6">6</button>
+      <button type="button" class="button button-operator" data-action="operator" data-value="-">-</button>
+
+      <button type="button" class="button" data-action="digit" data-value="1">1</button>
+      <button type="button" class="button" data-action="digit" data-value="2">2</button>
+      <button type="button" class="button" data-action="digit" data-value="3">3</button>
+      <button type="button" class="button button-operator" data-action="operator" data-value="+">+</button>
+
+      <button type="button" class="button button-zero" data-action="digit" data-value="0">0</button>
+      <button type="button" class="button" data-action="decimal">.</button>
+      <button type="button" class="button button-operator" data-action="operator" data-value="=">=</button>
+    </div>
   </div>
 
   <script src="js/calculator.js"></script>
