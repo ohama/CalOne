@@ -10,29 +10,29 @@ See: .planning/PROJECT.md (updated 2026-02-14)
 ## Current Position
 
 Phase: 2 of 5 (Display and Button Interface)
-Plan: 1 of 3 (display and button layout complete)
+Plan: 2 of 3 (backspace functionality complete)
 Status: In progress
-Last activity: 2026-02-13 — Completed 02-01-PLAN.md
+Last activity: 2026-02-14 — Completed 02-02-PLAN.md
 
-Progress: [████░░░░░░] 40%
+Progress: [███████░░░] 75%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
-- Average duration: 1.5 min
-- Total execution time: 0.05 hours
+- Total plans completed: 3
+- Average duration: 1.3 min
+- Total execution time: 0.07 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1 | 1 | 2min | 2min |
-| 2 | 1 | 1min | 1min |
+| 2 | 2 | 2min | 1min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (2min), 02-01 (1min)
-- Trend: UI implementation faster than API logic
+- Last 5 plans: 01-01 (2min), 02-01 (1min), 02-02 (1min)
+- Trend: Consistent 1min execution for UI tasks
 
 *Updated after each plan completion*
 
@@ -54,6 +54,9 @@ Recent decisions affecting current work:
 - Mobile base: 60px button height, tablet+: 80px height (rationale: exceeds touch target minimums)
 - Wrap :hover in @media (hover: hover) (rationale: prevents sticky hover on touch devices)
 - Use semantic <button> elements for accessibility (rationale: keyboard focus, screen readers)
+- Backspace on Error state resets to '0' instead of creating 'Erro' string (rationale: prevents invalid state)
+- Backspace after operator (waitingForSecondOperand=true) resets to '0' and clears flag (rationale: prevents editing first operand)
+- Single digit backspace resets to '0' instead of empty string (rationale: prevents parseFloat(NaN) errors)
 
 ### Pending Todos
 
@@ -65,6 +68,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-13 22:29:31 UTC
-Stopped at: Completed 02-01-PLAN.md (display and button interface)
+Last session: 2026-02-13 22:29:49 UTC
+Stopped at: Completed 02-02-PLAN.md (backspace functionality)
 Resume file: None
