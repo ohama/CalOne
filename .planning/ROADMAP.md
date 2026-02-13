@@ -12,7 +12,7 @@ Cal is a minimal calculator web app built with vanilla JavaScript, delivering pr
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Core Calculator Engine** - Pure calculation logic and state management
+- [x] **Phase 1: Core Calculator Engine** - Pure calculation logic and state management
 - [ ] **Phase 2: Display and Button Interface** - Visual interface with button input
 - [ ] **Phase 3: Keyboard Support** - Keyboard input and focus management
 - [ ] **Phase 4: Calculation History** - History tracking with localStorage persistence
@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 1 plan
 
 Plans:
-- [ ] 01-01-PLAN.md — Core calculator engine with state management and all arithmetic operations
+- [x] 01-01-PLAN.md — Core calculator engine with state management and all arithmetic operations
 
 ### Phase 2: Display and Button Interface
 **Goal**: Users can interact with calculator through clickable button interface
@@ -98,7 +98,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Core Calculator Engine | 0/1 | Ready | - |
+| 1. Core Calculator Engine | 1/1 | Complete | 2026-02-14 |
 | 2. Display and Button Interface | 0/TBD | Not started | - |
 | 3. Keyboard Support | 0/TBD | Not started | - |
 | 4. Calculation History | 0/TBD | Not started | - |
