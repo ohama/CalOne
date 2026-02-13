@@ -4,6 +4,54 @@ function updateDisplay() {
   display.textContent = formatForDisplay(calculator.displayValue);
 }
 
+// Handle keyboard input for calculator
+function handleKeyboardInput(event) {
+  // Early return if event already handled
+  if (event.defaultPrevented) return;
+
+  let handled = false;
+
+  // Number keys (0-9)
+  if (event.key >= '0' && event.key <= '9') {
+    inputDigit(event.key);
+    handled = true;
+  }
+  // Operator keys (+, -, *, /)
+  else if (['+', '-', '*', '/'].includes(event.key)) {
+    const operatorMap = { '*': '×', '/': '÷' };
+    handleOperator(operatorMap[event.key] || event.key);
+    handled = true;
+  }
+  // Special keys
+  else {
+    switch (event.key) {
+      case 'Enter':
+      case '=':
+        handleOperator('=');
+        handled = true;
+        break;
+      case 'Escape':
+        resetCalculator();
+        handled = true;
+        break;
+      case 'Backspace':
+        handleBackspace();
+        handled = true;
+        break;
+      case '.':
+        inputDecimal();
+        handled = true;
+        break;
+    }
+  }
+
+  // Prevent default browser behavior and update display for handled keys
+  if (handled) {
+    event.preventDefault();
+    updateDisplay();
+  }
+}
+
 // Handle button clicks using event delegation
 function handleButtonClick(event) {
   // Guard: only handle button clicks
@@ -56,6 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (backspaceButton) {
     backspaceButton.addEventListener('click', handleButtonClick);
   }
+
+  // Attach keyboard event listener
+  document.addEventListener('keydown', handleKeyboardInput);
 });
 
 // Log ready message
