@@ -7,40 +7,53 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div class="calculator">
-    <div class="calculator-display-row">
-      <div class="calculator-display" id="display">0</div>
-      <button type="button" class="button-backspace" data-action="backspace">⌫</button>
+  <div class="calculator-container">
+    <div class="calculator">
+      <div class="calculator-display-row">
+        <div class="calculator-display" id="display">0</div>
+        <button type="button" class="button-backspace" data-action="backspace">⌫</button>
+      </div>
+
+      <div class="calculator-buttons">
+        <button type="button" class="button button-function" data-action="clear">AC</button>
+        <button type="button" class="button button-function" data-action="sign">+/-</button>
+        <button type="button" class="button button-function" data-action="percent">%</button>
+        <button type="button" class="button button-operator" data-action="operator" data-value="÷">÷</button>
+
+        <button type="button" class="button" data-action="digit" data-value="7">7</button>
+        <button type="button" class="button" data-action="digit" data-value="8">8</button>
+        <button type="button" class="button" data-action="digit" data-value="9">9</button>
+        <button type="button" class="button button-operator" data-action="operator" data-value="×">×</button>
+
+        <button type="button" class="button" data-action="digit" data-value="4">4</button>
+        <button type="button" class="button" data-action="digit" data-value="5">5</button>
+        <button type="button" class="button" data-action="digit" data-value="6">6</button>
+        <button type="button" class="button button-operator" data-action="operator" data-value="-">-</button>
+
+        <button type="button" class="button" data-action="digit" data-value="1">1</button>
+        <button type="button" class="button" data-action="digit" data-value="2">2</button>
+        <button type="button" class="button" data-action="digit" data-value="3">3</button>
+        <button type="button" class="button button-operator" data-action="operator" data-value="+">+</button>
+
+        <button type="button" class="button button-zero" data-action="digit" data-value="0">0</button>
+        <button type="button" class="button" data-action="decimal">.</button>
+        <button type="button" class="button button-operator" data-action="operator" data-value="=">=</button>
+      </div>
     </div>
 
-    <div class="calculator-buttons">
-      <button type="button" class="button button-function" data-action="clear">AC</button>
-      <button type="button" class="button button-function" data-action="sign">+/-</button>
-      <button type="button" class="button button-function" data-action="percent">%</button>
-      <button type="button" class="button button-operator" data-action="operator" data-value="÷">÷</button>
-
-      <button type="button" class="button" data-action="digit" data-value="7">7</button>
-      <button type="button" class="button" data-action="digit" data-value="8">8</button>
-      <button type="button" class="button" data-action="digit" data-value="9">9</button>
-      <button type="button" class="button button-operator" data-action="operator" data-value="×">×</button>
-
-      <button type="button" class="button" data-action="digit" data-value="4">4</button>
-      <button type="button" class="button" data-action="digit" data-value="5">5</button>
-      <button type="button" class="button" data-action="digit" data-value="6">6</button>
-      <button type="button" class="button button-operator" data-action="operator" data-value="-">-</button>
-
-      <button type="button" class="button" data-action="digit" data-value="1">1</button>
-      <button type="button" class="button" data-action="digit" data-value="2">2</button>
-      <button type="button" class="button" data-action="digit" data-value="3">3</button>
-      <button type="button" class="button button-operator" data-action="operator" data-value="+">+</button>
-
-      <button type="button" class="button button-zero" data-action="digit" data-value="0">0</button>
-      <button type="button" class="button" data-action="decimal">.</button>
-      <button type="button" class="button button-operator" data-action="operator" data-value="=">=</button>
+    <div class="history-panel">
+      <div class="history-header">
+        <h2>History</h2>
+        <button type="button" class="button-clear-history" data-action="clear-history">Clear</button>
+      </div>
+      <div id="history-list" class="history-list">
+        <p class="history-empty">No calculations yet</p>
+      </div>
     </div>
   </div>
 
   <script src="js/calculator.js"></script>
+  <script src="js/history.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
