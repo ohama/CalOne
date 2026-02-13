@@ -83,6 +83,11 @@ function handleButtonClick(event) {
     case 'percent':
       handlePercent();
       break;
+    case 'clear-history':
+      if (typeof clearHistory === 'function') {
+        clearHistory();
+      }
+      return; // Don't call updateDisplay for history clear
     default:
       return; // Unknown action, don't update display
   }
@@ -105,8 +110,18 @@ document.addEventListener('DOMContentLoaded', () => {
     backspaceButton.addEventListener('click', handleButtonClick);
   }
 
+  const clearHistoryButton = document.querySelector('.button-clear-history');
+  if (clearHistoryButton) {
+    clearHistoryButton.addEventListener('click', handleButtonClick);
+  }
+
   // Attach keyboard event listener
   document.addEventListener('keydown', handleKeyboardInput);
+
+  // Initialize history display on page load
+  if (typeof renderHistory === 'function') {
+    renderHistory();
+  }
 });
 
 // Log ready message
