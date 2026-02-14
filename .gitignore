@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Test artifacts
+*.log
+
+# OS files
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
