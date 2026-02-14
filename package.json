@@ -13,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "@vitest/browser": "^4.0.18",
+    "@vitest/browser-playwright": "^4.0.18",
     "@vitest/coverage-v8": "^4.0.18",
     "playwright": "^1.58.2",
     "vitest": "^4.0.18"

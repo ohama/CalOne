@@ -1,12 +1,15 @@
 import { defineConfig } from 'vitest/config'
+import { playwright } from '@vitest/browser-playwright'
 
 export default defineConfig({
   test: {
     // Browser mode configuration
     browser: {
       enabled: true,
-      provider: 'playwright',
-      name: 'chromium',
+      provider: playwright(),
+      instances: [
+        { browser: 'chromium' }
+      ],
       headless: true,
     },
     // Coverage configuration
