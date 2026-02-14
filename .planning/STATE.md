@@ -12,16 +12,16 @@ See: .planning/PROJECT.md (updated 2026-02-14)
 Phase: 6 of 6 (Automated Testing)
 Plan: 2 of 5 complete
 Status: In progress
-Last activity: 2026-02-14 — Completed 06-03-PLAN.md (History localStorage Tests)
+Last activity: 2026-02-14 — Completed 06-02-PLAN.md (Calculator Unit Tests)
 
-Progress: [███████░░░] 75%
+Progress: [████████░░] 80%
 
 ## Performance Metrics
 
 **Velocity:**
 - Total plans completed: 9
-- Average duration: 2.4 min
-- Total execution time: 0.38 hours
+- Average duration: 2.6 min
+- Total execution time: 0.39 hours
 
 **By Phase:**
 
@@ -31,11 +31,11 @@ Progress: [███████░░░] 75%
 | 2 | 3 | 3min | 1min |
 | 3 | 1 | 10min | 10min |
 | 4 | 2 | 3min | 1.5min |
-| 6 | 2 | 6min | 3min |
+| 6 | 2 | 7min | 3.5min |
 
 **Recent Trend:**
-- Last 5 plans: 04-01 (1min), 04-02 (2min), 06-01 (4min), 06-03 (2min)
-- Trend: Testing plans averaging 3min; infrastructure setup slightly longer than implementation
+- Last 5 plans: 04-01 (1min), 04-02 (2min), 06-01 (4min), 06-02 (3min)
+- Trend: Testing plans averaging 3.5min; test creation takes slightly longer than infrastructure
 
 *Updated after each plan completion*
 
@@ -86,6 +86,9 @@ Recent decisions affecting current work:
 - Use @vitest-environment browser directive for real localStorage API access (rationale: enables testing browser APIs without mocks)
 - Create DOM #history-list element in beforeEach to prevent console warnings (rationale: renderHistory() expects this element)
 - Verify FIFO eviction by checking oldest entries removed when exceeding 50 limit (rationale: validates max entries enforcement)
+- Mock history.js dependency with vi.mock() before importing calculator (rationale: isolates unit tests from external dependencies)
+- Test through public API (calculator.displayValue) not internal state (rationale: more robust testing that reflects actual usage)
+- Use beforeEach() for resetCalculator() call (rationale: ensures clean state for each test, prevents state leakage)
 
 ### Pending Todos
 
@@ -98,7 +101,7 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-14
-Stopped at: Completed 06-03-PLAN.md (History localStorage Tests)
+Stopped at: Completed 06-02-PLAN.md (Calculator Unit Tests)
 Resume file: None
 
 Note: Phases 1-4 complete in single session. Phase 6 (testing) in progress.
