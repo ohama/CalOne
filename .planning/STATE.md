@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-14)
 
 **Core value:** 기본 계산을 빠르고 정확하게 할 수 있어야 한다
-**Current focus:** Phase 5 - Polish and Deploy
+**Current focus:** Milestone complete — all phases done
 
 ## Current Position
 
-Phase: 5 of 6 (Polish and Deploy)
-Plan: 1 of 2 complete
-Status: In progress
-Last activity: 2026-02-14 — Completed 05-01-PLAN.md (Production Metadata and Deployment)
+Phase: 6 of 6 (all complete)
+Plan: 13 of 13 complete
+Status: Milestone complete
+Last activity: 2026-02-14 — Completed 05-02-PLAN.md (Deployment Verification)
 
-Progress: [████████████░░] 92% (12/13 plans)
+Progress: [██████████████] 100% (13/13 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 12
-- Average duration: 2.3 min
-- Total execution time: 0.47 hours
+- Total plans completed: 13
+- Average duration: 2.5 min
+- Total execution time: 0.53 hours
 
 **By Phase:**
 
@@ -31,13 +31,12 @@ Progress: [████████████░░] 92% (12/13 plans)
 | 2 | 3 | 3min | 1min |
 | 3 | 1 | 10min | 10min |
 | 4 | 2 | 3min | 1.5min |
-| 6 | 4 | 10min | 2.5min |
-
-| 5 | 1 | 2min | 2min |
+| 5 | 2 | 7min | 3.5min |
+| 6 | 5 | 10min | 2min |
 
 **Recent Trend:**
-- Last 5 plans: 06-02 (3min), 06-04 (2min), 06-05 (1min), 05-01 (2min)
-- Trend: Deployment setup completed in 2min; push deferred (no remote configured)
+- Last 5 plans: 06-05 (1min), 05-01 (2min), 05-02 (5min)
+- Trend: Deployment completed with one workflow fix
 
 *Updated after each plan completion*
 
@@ -59,60 +58,27 @@ Recent decisions affecting current work:
 - Mobile base: 60px button height, tablet+: 80px height (rationale: exceeds touch target minimums)
 - Wrap :hover in @media (hover: hover) (rationale: prevents sticky hover on touch devices)
 - Use semantic <button> elements for accessibility (rationale: keyboard focus, screen readers)
-- Backspace on Error state resets to '0' instead of creating 'Erro' string (rationale: prevents invalid state)
-- Backspace after operator (waitingForSecondOperand=true) resets to '0' and clears flag (rationale: prevents editing first operand)
-- Single digit backspace resets to '0' instead of empty string (rationale: prevents parseFloat(NaN) errors)
-- Event delegation via single listener on .calculator-buttons container (rationale: better performance than 19 individual listeners)
-- closest('button') guard clause handles event bubbling (rationale: more robust than event.target === button)
-- Always call updateDisplay() after state changes (rationale: keeps UI synchronized with calculator state)
-- Use event.key property (not deprecated keyCode) for modern keyboard event handling (rationale: modern standard, better compatibility)
-- Map keyboard symbols to calculator display symbols (asterisk → ×, slash → ÷) (rationale: consistent visual representation)
-- Prevent default browser behavior only for handled keys (rationale: coexist with browser keyboard shortcuts)
+- Event delegation via single listener on .calculator-buttons container (rationale: better performance)
 - Document-level keydown listener for global keyboard capture (rationale: works regardless of focus state)
-- Reuse existing calculator functions in keyboard handler (rationale: DRY principle, single source of truth)
 - Use calc_history_v1 as localStorage key (rationale: enables future schema migrations)
 - MAX_HISTORY_ENTRIES = 50 (rationale: balances usability and quota prevention)
-- Trim to half capacity on quota exceeded (rationale: graceful degradation instead of complete failure)
-- Cache history in memory (rationale: avoid repeated localStorage reads)
-- Log storage warnings without throwing (rationale: graceful degradation for private browsing)
-- Only track binary operations (+, -, ×, ÷) when = is pressed (rationale: unary ops are transformations, not calculations)
-- Exclude error results from history (rationale: division by zero is not a valid calculation result)
-- Wrap calculator in .calculator-container for flex layout (rationale: enables responsive side-by-side on desktop)
-- Add history.js script between calculator.js and main.js (rationale: dependency order)
-- Use event delegation for clear-history button (rationale: consistent with existing button handling pattern)
-- Defensive typeof checks before calling history functions (rationale: graceful degradation if history.js fails to load)
-- Use Vitest v4 with Playwright browser provider for real browser API testing (rationale: tests localStorage and DOM without mocks)
-- Convert to ES modules with main.js as entry point (rationale: enables test imports while maintaining browser compatibility)
-- Use playwright() factory function for browser.provider (rationale: Vitest v4 API requires factory instead of string)
-- Add browser.instances configuration (rationale: Vitest v4 requirement for browser project resolution)
-- Use @vitest-environment browser directive for real localStorage API access (rationale: enables testing browser APIs without mocks)
-- Create DOM #history-list element in beforeEach to prevent console warnings (rationale: renderHistory() expects this element)
-- Verify FIFO eviction by checking oldest entries removed when exceeding 50 limit (rationale: validates max entries enforcement)
-- Mock history.js dependency with vi.mock() before importing calculator (rationale: isolates unit tests from external dependencies)
-- Test through public API (calculator.displayValue) not internal state (rationale: more robust testing that reflects actual usage)
-- Use beforeEach() for resetCalculator() call (rationale: ensures clean state for each test, prevents state leakage)
-- Create minimal DOM structure programmatically in beforeEach (rationale: faster than loading full index.html, sufficient for testing)
-- Test event delegation by mocking event.target and closest() (rationale: verifies real-world event bubbling behavior)
-- Test both button clicks and keyboard events for same operations (rationale: complete coverage of user interaction paths)
-- Use npm ci instead of npm install in CI for reproducible builds (rationale: npm ci installs from package-lock.json exactly, fails on mismatch, faster in CI)
-- Install only chromium browser in CI (rationale: tests only need one browser engine; installing all Playwright browsers adds minutes to CI time)
-- Upload coverage as artifact in GitHub Actions (rationale: makes reports accessible from UI, enables future coverage service integration)
-- SVG-first favicon with PNG/ICO fallbacks for broad browser compatibility (rationale: modern standard, scalable at all sizes)
-- Upload entire repository root (path: '.') in deploy workflow (rationale: no build step needed for vanilla JS)
-- Orange #ff9500 accent in favicon matching operator button color (rationale: brand consistency)
+- Use Vitest v4 with Playwright browser provider for real browser API testing
+- Use npm ci instead of npm install in CI for reproducible builds
+- SVG-first favicon with PNG/ICO fallbacks for broad browser compatibility
+- Add enablement: true to actions/configure-pages@v5 (rationale: auto-enables Pages without manual settings)
 
 ### Pending Todos
 
-None yet.
+None.
 
 ### Blockers/Concerns
 
-- No git remote configured. Push to trigger GitHub Pages deployment is pending. Need to create repo and add remote before 05-02 verification.
+None — all phases complete, calculator deployed and verified.
 
 ## Session Continuity
 
 Last session: 2026-02-14
-Stopped at: Completed 05-01-PLAN.md (Production Metadata and Deployment)
+Stopped at: All phases complete. Milestone ready for completion.
 Resume file: None
 
-Note: Phases 1-4 and Phase 6 complete. Phase 5 plan 1 complete (local commit ready). Plan 05-02 pending remote setup.
+Note: All 6 phases complete. Calculator live at https://ohama.github.io/CalOne/
