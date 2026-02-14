@@ -1,3 +1,19 @@
+// Import calculator functions and state
+import {
+  calculator,
+  inputDigit,
+  inputDecimal,
+  handleOperator,
+  resetCalculator,
+  handleBackspace,
+  toggleSign,
+  handlePercent,
+  formatForDisplay
+} from './calculator.js'
+
+// Import history functions
+import { clearHistory, renderHistory } from './history.js'
+
 // Update display element with current calculator value
 function updateDisplay() {
   const display = document.getElementById('display');
@@ -84,9 +100,7 @@ function handleButtonClick(event) {
       handlePercent();
       break;
     case 'clear-history':
-      if (typeof clearHistory === 'function') {
-        clearHistory();
-      }
+      clearHistory();
       return; // Don't call updateDisplay for history clear
     default:
       return; // Unknown action, don't update display
@@ -119,11 +133,16 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', handleKeyboardInput);
 
   // Initialize history display on page load
-  if (typeof renderHistory === 'function') {
-    renderHistory();
-  }
+  renderHistory();
 });
 
 // Log ready message
 console.log('Calculator engine loaded. Try the commands in the instructions above.');
 console.log('Current state:', calculator);
+
+// Export functions for testing
+export {
+  updateDisplay,
+  handleKeyboardInput,
+  handleButtonClick
+}

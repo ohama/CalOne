@@ -183,3 +183,14 @@ function renderHistory() {
     `)
     .join('');
 }
+
+// Export all functions and constants for testing
+export {
+  HISTORY_KEY,
+  MAX_HISTORY_ENTRIES,
+  loadHistory,
+  saveHistory,
+  addToHistory,
+  clearHistory,
+  renderHistory
+}

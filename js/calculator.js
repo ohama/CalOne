@@ -1,3 +1,6 @@
+// Import history management function
+import { addToHistory } from './history.js'
+
 // Calculator state object
 const calculator = {
   displayValue: '0',
@@ -206,4 +209,18 @@ function formatForDisplay(value, maxDigits = 10) {
   }
 
   return valueStr;
+}
+
+// Export all functions and state for testing
+export {
+  calculator,
+  inputDigit,
+  inputDecimal,
+  handleOperator,
+  performCalculation,
+  resetCalculator,
+  toggleSign,
+  handlePercent,
+  handleBackspace,
+  formatForDisplay
 }
