@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-14)
 ## Current Position
 
 Phase: 6 of 6 (Automated Testing)
-Plan: 3 of 5 complete
-Status: In progress
-Last activity: 2026-02-14 — Completed 06-04-PLAN.md (Integration Tests)
+Plan: 5 of 5 complete
+Status: Phase complete
+Last activity: 2026-02-14 — Completed 06-05-PLAN.md (CI/CD Automation)
 
-Progress: [████████░░] 83%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10
-- Average duration: 2.5 min
-- Total execution time: 0.42 hours
+- Total plans completed: 11
+- Average duration: 2.3 min
+- Total execution time: 0.43 hours
 
 **By Phase:**
 
@@ -31,11 +31,11 @@ Progress: [████████░░] 83%
 | 2 | 3 | 3min | 1min |
 | 3 | 1 | 10min | 10min |
 | 4 | 2 | 3min | 1.5min |
-| 6 | 3 | 9min | 3min |
+| 6 | 4 | 10min | 2.5min |
 
 **Recent Trend:**
-- Last 5 plans: 04-02 (2min), 06-01 (4min), 06-02 (3min), 06-04 (2min)
-- Trend: Testing plans averaging 3min; integration tests faster than unit tests
+- Last 5 plans: 06-01 (4min), 06-02 (3min), 06-04 (2min), 06-05 (1min)
+- Trend: Testing phase complete at 2.5min/plan average; CI setup fastest (1min)
 
 *Updated after each plan completion*
 
@@ -92,6 +92,9 @@ Recent decisions affecting current work:
 - Create minimal DOM structure programmatically in beforeEach (rationale: faster than loading full index.html, sufficient for testing)
 - Test event delegation by mocking event.target and closest() (rationale: verifies real-world event bubbling behavior)
 - Test both button clicks and keyboard events for same operations (rationale: complete coverage of user interaction paths)
+- Use npm ci instead of npm install in CI for reproducible builds (rationale: npm ci installs from package-lock.json exactly, fails on mismatch, faster in CI)
+- Install only chromium browser in CI (rationale: tests only need one browser engine; installing all Playwright browsers adds minutes to CI time)
+- Upload coverage as artifact in GitHub Actions (rationale: makes reports accessible from UI, enables future coverage service integration)
 
 ### Pending Todos
 
@@ -104,7 +107,7 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-14
-Stopped at: Completed 06-04-PLAN.md (Integration Tests)
+Stopped at: Completed 06-05-PLAN.md (CI/CD Automation)
 Resume file: None
 
-Note: Phases 1-4 complete in single session. Phase 6 (testing) in progress.
+Note: Phases 1-4 and Phase 6 complete. Phase 5 (Polish and Deploy) ready to start.
