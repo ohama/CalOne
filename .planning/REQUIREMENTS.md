@@ -24,8 +24,8 @@
 
 ### History
 
-- [ ] **HIST-01**: 계산 기록 목록 표시
-- [ ] **HIST-02**: 기록 전체 삭제
+- [x] **HIST-01**: 계산 기록 목록 표시
+- [x] **HIST-02**: 기록 전체 삭제
 
 ### UI
 
@@ -75,8 +75,8 @@
 | INPT-03 | Phase 2 | Complete |
 | INPT-04 | Phase 3 | Complete |
 | INPT-05 | Phase 1 | Complete |
-| HIST-01 | Phase 4 | Pending |
-| HIST-02 | Phase 4 | Pending |
+| HIST-01 | Phase 4 | Complete |
+| HIST-02 | Phase 4 | Complete |
 | UI-01 | Phase 2 | Complete |
 | UI-02 | Phase 2 | Complete |
 | UI-03 | Phase 2 | Complete |

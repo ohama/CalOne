@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Core Calculator Engine** - Pure calculation logic and state management
 - [x] **Phase 2: Display and Button Interface** - Visual interface with button input
 - [x] **Phase 3: Keyboard Support** - Keyboard input and focus management
-- [ ] **Phase 4: Calculation History** - History tracking with localStorage persistence
+- [x] **Phase 4: Calculation History** - History tracking with localStorage persistence
 - [ ] **Phase 5: Polish and Deploy** - UI refinement and GitHub Pages deployment
 
 ## Phase Details
@@ -77,8 +77,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — History management module with localStorage persistence and error handling
-- [ ] 04-02-PLAN.md — Calculator expression tracking, responsive UI panel, and integration
+- [x] 04-01-PLAN.md — History management module with localStorage persistence and error handling
+- [x] 04-02-PLAN.md — Calculator expression tracking, responsive UI panel, and integration
 
 ### Phase 5: Polish and Deploy
 **Goal**: Calculator is production-ready and publicly accessible
@@ -104,5 +104,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Core Calculator Engine | 1/1 | Complete | 2026-02-14 |
 | 2. Display and Button Interface | 3/3 | Complete | 2026-02-14 |
 | 3. Keyboard Support | 1/1 | Complete | 2026-02-14 |
-| 4. Calculation History | 0/TBD | Not started | - |
+| 4. Calculation History | 2/2 | Complete | 2026-02-14 |
 | 5. Polish and Deploy | 0/TBD | Not started | - |
