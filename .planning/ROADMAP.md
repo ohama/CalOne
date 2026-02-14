@@ -17,6 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Keyboard Support** - Keyboard input and focus management
 - [x] **Phase 4: Calculation History** - History tracking with localStorage persistence
 - [ ] **Phase 5: Polish and Deploy** - UI refinement and GitHub Pages deployment
+- [ ] **Phase 6: Automated Testing** - Create testing without human interactions after surveying
 
 ## Phase Details
 
@@ -94,10 +95,28 @@ Plans:
 Plans:
 - [ ] 05-01: TBD during phase planning
 
+### Phase 6: Automated Testing
+**Goal**: All calculator features are covered by automated tests that run without human interaction
+**Depends on**: Phase 5
+**Requirements**: None (quality assurance phase)
+**Success Criteria** (what must be TRUE):
+  1. Automated test suite covers all calculator operations (arithmetic, percent, sign, backspace)
+  2. Tests verify history tracking, localStorage persistence, and clear functionality
+  3. Tests can run from command line without browser interaction
+  4. All tests pass consistently
+**Plans**: 5 plans
+
+Plans:
+- [ ] 06-01-PLAN.md — Test infrastructure setup with Vitest and ES module exports
+- [ ] 06-02-PLAN.md — Unit tests for calculator pure functions
+- [ ] 06-03-PLAN.md — Browser-mode tests for localStorage history
+- [ ] 06-04-PLAN.md — Integration tests for DOM interactions and events
+- [ ] 06-05-PLAN.md — GitHub Actions CI workflow and documentation
+
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -106,3 +125,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 3. Keyboard Support | 1/1 | Complete | 2026-02-14 |
 | 4. Calculation History | 2/2 | Complete | 2026-02-14 |
 | 5. Polish and Deploy | 0/TBD | Not started | - |
+| 6. Automated Testing | 0/TBD | Not started | - |
