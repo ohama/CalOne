@@ -90,10 +90,11 @@ Plans:
   2. Button presses show visual feedback (hover, active states)
   3. Calculator is deployed to GitHub Pages with working public URL
   4. Touch targets are large enough for comfortable mobile use (minimum 44×44px)
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 05-01: TBD during phase planning
+- [ ] 05-01-PLAN.md — Production metadata and GitHub Actions deployment workflow
+- [ ] 05-02-PLAN.md — Repository settings configuration and deployment verification
 
 ### Phase 6: Automated Testing
 **Goal**: All calculator features are covered by automated tests that run without human interaction
@@ -124,5 +125,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 2. Display and Button Interface | 3/3 | Complete | 2026-02-14 |
 | 3. Keyboard Support | 1/1 | Complete | 2026-02-14 |
 | 4. Calculation History | 2/2 | Complete | 2026-02-14 |
-| 5. Polish and Deploy | 0/TBD | Not started | - |
+| 5. Polish and Deploy | 0/2 | Not started | - |
 | 6. Automated Testing | 5/5 | Complete | 2026-02-14 |
