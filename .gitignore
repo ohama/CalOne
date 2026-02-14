@@ -7,6 +7,12 @@ coverage/
 
 # Test artifacts
 *.log
+test-history.html
+tests/__screenshots__/
+
+# Tools
+.claude/
+.planning/agent-history.json
 
 # OS files
 .DS_Store
